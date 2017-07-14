@@ -30,7 +30,7 @@ namespace MvcAppFirst.Controllers
             
         }
 
-        public ActionResult GetEmp()
+        public ActionResult GetEmp(string save="0")
         {
             return View(emp.GetEmployee());
         }
@@ -49,11 +49,14 @@ namespace MvcAppFirst.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddEmployee(string name,string job,string dept)
+        public ActionResult AddEmployee(Employee Input)
         {
-
-            emp.InsertEmp();
-            return PartialView();
+            emp.Name = Input.Name;
+            emp.deptid = Input.deptid;
+            emp.Job = Input.Job;
+            string ret = emp.InsertEmp();
+            
+            return View("GetEmp",emp.GetEmployee());
         }
     }
 }

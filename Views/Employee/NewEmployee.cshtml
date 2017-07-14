@@ -16,7 +16,7 @@ Employee Name:
 
 
 <td>
-<input type="text" runat="server" id="name" />
+<input type="text"  name="Name" />
 </td>
 </tr>
 <tr>
@@ -24,7 +24,7 @@ Employee Name:
 Job
 </th>
 <td>
-<input type="text" id="job" />
+<input type="text" name="Job" />
 </td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@ Job
 DepartMent
 </th>
 <td>
-<select id="dept" style="width:100%">
+<select name="deptid" style="width:100%">
     <option value="0">--Select--</option>
     @{
     foreach (var item in Model)
@@ -41,12 +41,17 @@ DepartMent
     }
     }
  </select>   
-
+ @{
+    if (Request.QueryString["save"] != null)
+    {
+        @Html.Display("Saved Successfully");
+    }
+}
 </td>
 </tr>
 <tr>
 <td>
- <input type="submit"> 
+ <input type="submit" /> 
 </td>
 </tr>
 </table>
