@@ -55,8 +55,7 @@ namespace MvcAppFirst.Controllers
             emp.deptid = Input.deptid;
             emp.Job = Input.Job;
             string ret = emp.InsertEmp();
-            
-            return View("GetEmp",emp.GetEmployee());
+            return  View("GetEmp",emp.GetEmployee());
         }
     }
 }
