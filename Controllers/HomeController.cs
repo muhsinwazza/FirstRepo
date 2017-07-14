@@ -21,10 +21,11 @@ namespace MvcAppFirst.Controllers
             return "This is done using MVC";
         }
 
-        public ViewResult GetContent()
+        public ActionResult GetContent()
         {
-            return View();
+            return RedirectToAction("GetEmp", "Employee");
         }
+   
 
     }
 }

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MvcAppFirst.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<h2>Details</h2>
+<html>
+<head>
+      <meta name = "viewport" content = "width = device-width" />
+      <title>Employee</title>
+   </head>
+   <body>
+@*<table border="1">
+ @foreach (var item in Model) {
+            <tr>
+               <td>
+                  @Html.DisplayFor(modelItem => item.Name)
+               </td>
+					
+               <td>
+                  @Html.DisplayFor(modelItem => item.Department)
+               </td>
+					
+               <td>
+                  @Html.DisplayFor(modelItem => item.id)
+                 
+               </td>
+					
+               
+					
+            </tr>
+         }
+
+</table>*@
+@{
+    var list = Model.ToList();
+    <table border="1">
+    <th>
+        @Html.DisplayFor(modelitem => list[0].Name)
+    </th>
+    <th>
+        @Html.DisplayFor(modelitem => list[0].Department)
+    </th>
+    <th>
+        @Html.DisplayFor(modelItem => list[0].Job)
+    </th>
+    <th>
+        @Html.DisplayFor(modelitem => list[0].id)
+    </th>
+
+</table>
+}
+
+
+<br /><br />
+@Html.ActionLink("Go Back", "GetEmp")
+</body>
+</html>

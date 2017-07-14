@@ -58,3 +58,5 @@ C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\Fi
 C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\FirstRepo\obj\Debug\MvcAppFirst.csprojResolveAssemblyReference.cache
 C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\FirstRepo\obj\Debug\MvcAppFirst.dll
 C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\FirstRepo\obj\Debug\MvcAppFirst.pdb
+C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\FirstRepo\bin\HelprerClass.dll
+C:\Users\gururaj.m.BLUECHIP\Documents\Visual Studio 2010\Projects\MvcAppFirst\FirstRepo\bin\HelprerClass.pdb

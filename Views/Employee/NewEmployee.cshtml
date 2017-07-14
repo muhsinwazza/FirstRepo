@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MvcAppFirst.Models.Employee>
+
+@{
+    Layout = null;
+    ViewBag.Title = "AddEmployee";
+}
+<h2>NewEmployee</h2>
+<script src="../../Resource/Script/jquery-1.9.1.js" language="javascript" type="text/javascript"></script>
+@using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+{
+<table border="0" cellpadding="2px" cellspacing="2px">
+<tr>
+<th>
+Employee Name:
+</th>
+
+
+<td>
+<input type="text" runat="server" id="name" />
+</td>
+</tr>
+<tr>
+<th>
+Job
+</th>
+<td>
+<input type="text" id="job" />
+</td>
+</tr>
+<tr>
+<th>
+DepartMent
+</th>
+<td>
+<select id="dept" style="width:100%">
+    <option value="0">--Select--</option>
+    @{
+    foreach (var item in Model)
+    {
+        <option value="@item.deptid">@item.Department</option>
+    }
+    }
+ </select>   
+
+</td>
+</tr>
+<tr>
+<td>
+ <input type="submit"> 
+</td>
+</tr>
+</table>
+}
