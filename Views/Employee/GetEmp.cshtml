@@ -64,6 +64,14 @@
 			
       </table>
    
-     
+     @{
+         if( @ViewBag.DeleteStatus!=null && @ViewBag.DeleteStatus.ToString() !="")
+         {
+             <h3><font color="red">
+             @ViewBag.DeleteStatus.ToString()
+             </font>
+             </h3>
+         }
+     }
    </body>
 </html>

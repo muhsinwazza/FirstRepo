@@ -17,7 +17,7 @@
 </head>
 <body>
 <h2>Edit</h2>
-@using (Html.BeginForm("Edit","Employee",FormMethod.Post))
+@using (Html.BeginForm("Edit", "Employee", FormMethod.Post))
 {
 <div class="row">
 @{var list = Model.ToList();
@@ -44,10 +44,18 @@
    <select name="deptid" class="validate"  id="drop1" style="display:inline;">
    <option value="0" >--Select One--</option>
     @{
-    foreach (var item in ViewBag.department)
-    {
+  foreach (var item in ViewBag.department)
+  {
+
+      if (@item.deptid == @list[0].deptid)
+      {
+        <option value="@item.deptid" selected="selected">@item.Department</option>
+      }
+      else
+      {
         <option value="@item.deptid">@item.Department</option>
-    }
+      }
+  }
     }
     </select>
       <label class="active" for="drop1">Department</label>
@@ -56,8 +64,21 @@
     <div class="row">
     <div class="input-field col s4">
     <button class="btn waves-effect waves-light" type="submit" name="submit">Submit</button>
+    @Html.ActionLink("Back","GetEmp",new {id=UrlParameter.Optional},new {@class = "btn waves-effect waves-light"})
     </div>
         
     </div>
-  }
+    <div class="row">
+    <div class="input-field col s4">
+    @{
+    if (ViewBag.UpdateState != "")
+    {
+       <h3><font color="blue">
+            @ViewBag.UpdateState
+       </font></h3>
+    }       
+}
+    </div>    
+    </div>
+}
   </body>

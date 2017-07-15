@@ -67,8 +67,21 @@ namespace MvcAppFirst.Controllers
         [HttpPost]
         public ActionResult Edit(Employee input)
         {
-            
+            emp.id = input.id;
+            emp.Name = input.Name;
+            emp.Job = input.Job;
+            emp.deptid = input.deptid;
+            ViewBag.UpdateState = emp.Update();
+            ViewBag.department = emp.GetDept();
             return View(emp.GetEmployee(input.id));
+        }
+
+        public ActionResult Delete(int id)
+        {
+            emp.id = id;
+          
+            ViewBag.DeleteStatus = emp.delete();
+            return View("GetEmp", emp.GetEmployee());
         }
     }
 }
