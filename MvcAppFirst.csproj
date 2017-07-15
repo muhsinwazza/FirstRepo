@@ -119,6 +119,46 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="Resource\Script\jquery-1.9.1.js" />
+    <Content Include="Resource\Styles\base-context-min.css" />
+    <Content Include="Resource\Styles\base-context.css" />
+    <Content Include="Resource\Styles\base-min.css" />
+    <Content Include="Resource\Styles\base.css" />
+    <Content Include="Resource\Styles\buttons-core-min.css" />
+    <Content Include="Resource\Styles\buttons-core.css" />
+    <Content Include="Resource\Styles\buttons-min.css" />
+    <Content Include="Resource\Styles\buttons.css" />
+    <Content Include="Resource\Styles\forms-min.css" />
+    <Content Include="Resource\Styles\forms-nr-min.css" />
+    <Content Include="Resource\Styles\forms-nr.css" />
+    <Content Include="Resource\Styles\forms.css" />
+    <Content Include="Resource\Styles\grids-core-min.css" />
+    <Content Include="Resource\Styles\grids-core.css" />
+    <Content Include="Resource\Styles\grids-min.css" />
+    <Content Include="Resource\Styles\grids-responsive-min.css" />
+    <Content Include="Resource\Styles\grids-responsive-old-ie-min.css" />
+    <Content Include="Resource\Styles\grids-responsive-old-ie.css" />
+    <Content Include="Resource\Styles\grids-responsive.css" />
+    <Content Include="Resource\Styles\grids-units-min.css" />
+    <Content Include="Resource\Styles\grids-units.css" />
+    <Content Include="Resource\Styles\grids.css" />
+    <Content Include="Resource\Styles\menus-core-min.css" />
+    <Content Include="Resource\Styles\menus-core.css" />
+    <Content Include="Resource\Styles\menus-dropdown-min.css" />
+    <Content Include="Resource\Styles\menus-dropdown.css" />
+    <Content Include="Resource\Styles\menus-horizontal-min.css" />
+    <Content Include="Resource\Styles\menus-horizontal.css" />
+    <Content Include="Resource\Styles\menus-min.css" />
+    <Content Include="Resource\Styles\menus-scrollable-min.css" />
+    <Content Include="Resource\Styles\menus-scrollable.css" />
+    <Content Include="Resource\Styles\menus-skin-min.css" />
+    <Content Include="Resource\Styles\menus-skin.css" />
+    <Content Include="Resource\Styles\menus.css" />
+    <Content Include="Resource\Styles\pure-min.css" />
+    <Content Include="Resource\Styles\pure-nr-min.css" />
+    <Content Include="Resource\Styles\pure-nr.css" />
+    <Content Include="Resource\Styles\pure.css" />
+    <Content Include="Resource\Styles\tables-min.css" />
+    <Content Include="Resource\Styles\tables.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -157,6 +197,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Employee\AddEmployee.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Styles\bower.json" />
+    <None Include="Resource\Styles\HISTORY.md" />
+    <None Include="Resource\Styles\LICENSE.md" />
+    <None Include="Resource\Styles\README.md" />
+    <Content Include="Views\Employee\Edit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

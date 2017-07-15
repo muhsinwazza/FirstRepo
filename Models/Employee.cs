@@ -105,6 +105,30 @@ namespace MvcAppFirst.Models
             
         }
 
+        public string Update()
+        {
+            SqlCommand cmd = new SqlCommand("Prc_Employee", DbConnection.GetConnection());
+            List<Employee> empList = new List<Employee>();
+            try
+            {
+                if (cmd.Connection.State == ConnectionState.Closed)
+                    cmd.Connection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@type", SqlDbType.VarChar).Value = "update";
+                cmd.Parameters.Add("@name", SqlDbType.VarChar, 100).Value = Name;
+                cmd.Parameters.Add("@job", SqlDbType.VarChar, 100).Value = Job;
+                cmd.Parameters.Add("@dept", SqlDbType.Int).Value = deptid;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@Msg", SqlDbType.VarChar, 200).Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                return cmd.Parameters["@Msg"].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                return "Error : " + ex.ToString();
+            }
+        }
+
 
     }
 }

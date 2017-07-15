@@ -57,5 +57,18 @@ namespace MvcAppFirst.Controllers
             string ret = emp.InsertEmp();
             return  View("GetEmp",emp.GetEmployee());
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            ViewBag.department = emp.GetDept();
+            return View(emp.GetEmployee(id));
+        }
+        [HttpPost]
+        public ActionResult Edit(Employee input)
+        {
+            
+            return View(emp.GetEmployee(input.id));
+        }
     }
 }

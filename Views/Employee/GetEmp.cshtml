@@ -7,12 +7,21 @@
 <!DOCTYPE html>
 <html>
    <head>
+@*   <style type="text/css" src="~/Resource/Styles/table.css"></style>*@
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+</head>
       <meta name = "viewport" content = "width = device-width" />
       <title>Employee</title>
    </head>
    <body>
-      <p>@Html.ActionLink("Create New", "NewEmployee")</p>
-         <table class = "table">
+      <p>@Html.ActionLink("New", "NewEmployee", new { @class = "btn btn-floating pulse" }, new { @class = "btn btn-floating pulse" })</p>
+         <table class="bordered"  >
          <tr>
             <th>
                @Html.DisplayNameFor(model => model.Name)
@@ -24,9 +33,7 @@
 		    <th>
                 @Html.DisplayNameFor(model => model.Job)       
             </th>
-            <th>
-               @Html.DisplayNameFor(model => model.id)
-            </th>
+            
 				
             <th></th>
          </tr>
@@ -43,15 +50,12 @@
 			    <td>
                     @Html.DisplayFor(modelItem => item.Job)
                 </td>
-               <td>
-                  @Html.DisplayFor(modelItem => item.id)
-                 
-               </td>
+              
 					
                <td>
-                  @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                  @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                  @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                  @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "waves-effect waves-light btn" }) |
+                  @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "waves-effect waves-light btn" }) |
+                  @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "waves-effect waves-light btn" })
                  
                </td>
 					
