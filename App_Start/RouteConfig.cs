@@ -15,7 +15,7 @@ namespace MvcAppFirst
 
 
             routes.MapRoute(
-                "Movies", "{controller}/action/{name}",
+                "Movies", "Movies/Index/{name}",
                 new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
                 );
             routes.MapRoute(
