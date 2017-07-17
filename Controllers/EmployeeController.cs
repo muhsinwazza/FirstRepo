@@ -64,6 +64,7 @@ namespace MvcAppFirst.Controllers
             ViewBag.department = emp.GetDept();
             return View(emp.GetEmployee(id));
         }
+
         [HttpPost]
         public ActionResult Edit(Employee input)
         {
